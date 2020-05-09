@@ -1,0 +1,24 @@
+plugins {
+	id 'java'
+	id "io.franzbecker.gradle-lombok" version '3.1.0'
+}
+
+group = 'io.github.kdprog'
+version = '1.0.0'
+sourceCompatibility = '1.8'
+
+ext {
+	cxfVersion = '3.3.6'
+	micrometerVersion = '1.5.0'
+	commonsLangVersion = '3.10'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.apache.cxf:cxf-core:${cxfVersion}"
+	implementation "io.micrometer:micrometer-core:${micrometerVersion}"
+	implementation "org.apache.commons:commons-lang3:${commonsLangVersion}"
+}
